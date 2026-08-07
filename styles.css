@@ -90,6 +90,24 @@ body::after {
   backdrop-filter: blur(12px);
 }
 
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 96px;
+  height: 96px;
+  position: relative;
+  top: -8px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: none;
+  background: transparent;
+}
+
 h1 {
   margin: 0 0 10px;
   font-size: 2rem;
