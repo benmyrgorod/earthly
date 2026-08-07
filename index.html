@@ -11,46 +11,41 @@
     <main class="card">
       <h1>Derech Eretz</h1>
       <p class="subtitle">🌟 A new commentary on Torah, Bereshit - by Ovadia Binyamin.</p>
-      <ul>
-        <li>
-          <a href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+      <ul class="link-list">
+        <li class="link-row">
+          <a class="link-btn" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
             אור דרך ארץ
           </a>
+          <a class="pdf-btn" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for אור דרך ארץ">
+            ⬇
+          </a>
         </li>
-        <li>
-          <a href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+        <li class="link-row">
+          <a class="link-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
             The Light of the Earthly Path
           </a>
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            Свет земного пути
+          <a class="pdf-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for The Light of the Earthly Path">
+            ⬇
           </a>
         </li>
-    </ul>
+        <li class="link-row">
+          <a class="link-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+            Свет земного пути
+          </a>
+          <a class="pdf-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for Свет земного пути">
+            ⬇
+          </a>
+        </li>
+      </ul>
     <p class="signature">✨ May the clouds be glorious, and the path be lit!</p>
-    <ul>
-        <li>
-          <a href="https://sacredcal.one" target="_blank" rel="noopener noreferrer">
+      <ul class="link-list">
+        <li class="link-row">
+          <a class="link-btn" href="https://sacredcal.one" target="_blank" rel="noopener noreferrer">
             International Sacred Calendar
           </a>
         </li>
       </ul>
     </main>
-    <script>
-      const starfield = document.querySelector('.starfield');
-      const starCount = 90;
-
-      for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('span');
-        star.className = 'star';
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.setProperty('--duration', `${2.5 + Math.random() * 3}s`);
-        star.style.opacity = `${0.4 + Math.random() * 0.6}`;
-        star.style.transform = `scale(${0.7 + Math.random() * 1.2})`;
-        starfield.appendChild(star);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
