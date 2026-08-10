@@ -244,6 +244,34 @@ ul {
   }
 }
 
+@media (max-width: 480px) {
+  .header-row {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 4px;
+  }
+
+  .header-row > div {
+    display: contents;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    min-width: 0;
+    align-self: end;
+    overflow: hidden;
+  }
+
+  .logo {
+    top: 0;
+  }
+
+  .subtitle {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 340px) {
   h1 {
     font-size: 1.25rem;
