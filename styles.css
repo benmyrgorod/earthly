@@ -18,23 +18,17 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 22%),
-    radial-gradient(circle at 80% 30%, rgba(135, 206, 250, 0.18), transparent 25%),
-    radial-gradient(circle at 50% 80%, rgba(255, 120, 180, 0.16), transparent 28%),
-    linear-gradient(135deg, #030711 0%, #071120 35%, #120b22 70%, #0a0813 100%);
+  background: #030711;
 }
 
 body::before {
   content: "";
   position: fixed;
-  inset: -10%;
-  background:
-    radial-gradient(60% 70% at 30% 20%, rgba(255, 255, 255, 0.12), transparent 40%),
-    radial-gradient(70% 80% at 70% 30%, rgba(182, 147, 255, 0.18), transparent 45%),
-    radial-gradient(85% 100% at 50% 50%, rgba(255, 255, 255, 0.08), transparent 60%);
-  filter: blur(30px);
-  opacity: 0.8;
+  inset: 0;
+  background-image: url("assets/earthly-starry-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   pointer-events: none;
   z-index: 0;
 }
@@ -42,12 +36,8 @@ body::before {
 body::after {
   content: "";
   position: fixed;
-  inset: -15% -10% auto -10%;
-  height: 60vh;
-  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 30%, rgba(255, 255, 255, 0.02) 60%, transparent 100%);
-  transform: rotate(-18deg);
-  filter: blur(22px);
-  opacity: 0.7;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(3, 7, 17, 0.22), rgba(3, 7, 17, 0.04) 58%, rgba(3, 7, 17, 0.12));
   pointer-events: none;
   z-index: 0;
 }
@@ -116,7 +106,7 @@ body::after {
 
 h1 {
   margin: 0 0 10px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #ffe082;
@@ -226,13 +216,17 @@ ul {
     align-items: flex-start;
   }
 
+  body::before {
+    background-position: 72% center;
+  }
+
   .card {
     width: 100%;
     margin: 8px 0 24px;
   }
 
   h1 {
-    font-size: clamp(1.5rem, 7.2vw, 1.75rem);
+    font-size: clamp(1.35rem, 6.4vw, 1.55rem);
     line-height: 1.1;
     letter-spacing: 0.09em;
   }
@@ -264,7 +258,7 @@ ul {
   }
 
   .logo {
-    top: 0;
+    top: -12px;
   }
 
   .subtitle {
