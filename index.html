@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="original">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#030711" />
+    <meta name="application-name" content="Earthly Top" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Earthly Top" />
     <title>Earthly Top - Or Derech Eretz</title>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png" />
@@ -14,8 +18,16 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192.png" />
     <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preload" as="image" href="assets/earthly-starry-background.png" fetchpriority="high" />
-    <link rel="stylesheet" href="styles.css?v=20260813-9" />
+    <script>
+      try {
+        if (localStorage.getItem("earthly-theme") === "liquid") {
+          document.documentElement.dataset.theme = "liquid";
+        }
+      } catch (_) {}
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260815-2" />
   </head>
   <body>
     <div class="starfield" aria-hidden="true"></div>
@@ -26,6 +38,12 @@
           <h1>OR DERECH ERETZ</h1>
           <p class="subtitle">A new commentary on Torah - by Ovadia Binyamin.</p>
         </div>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Use Liquid Glass theme" title="Use Liquid Glass theme">
+          <span class="theme-toggle-label" aria-hidden="true">Glass</span>
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+        </button>
       </div>
       <ul class="link-list">
         <li class="link-row">
@@ -98,6 +116,6 @@
         </li>
       </ul>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260815-2"></script>
   </body>
 </html>
