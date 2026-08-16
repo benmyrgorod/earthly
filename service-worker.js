@@ -1,8 +1,8 @@
-const CACHE_NAME = 'earthly-shell-v4';
+const CACHE_NAME = 'earthly-shell-v6';
 const APP_SHELL = [
   './',
   './index.html',
-  './styles.css?v=20260815-4',
+  './styles.css?v=20260816-2',
   './script.js?v=20260815-3',
   './manifest.webmanifest',
   './logo.png',
