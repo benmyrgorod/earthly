@@ -243,7 +243,7 @@ ul {
 }
 
 .copyright {
-  margin: 14px 0 0;
+  margin: 8px 0 0;
   color: var(--text-secondary);
   font-size: 0.82rem;
   font-weight: 600;
@@ -251,6 +251,146 @@ ul {
   text-align: center;
   opacity: 0.78;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.62);
+}
+
+.site-footer {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.privacy-disclosure {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.62);
+}
+
+.privacy-disclosure a,
+.privacy-notice a,
+.policy-card a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+.privacy-notice {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 20px;
+  background: rgba(10, 16, 33, 0.96);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.52);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);
+}
+
+.privacy-notice[hidden] {
+  display: none;
+}
+
+.privacy-notice strong {
+  color: var(--accent);
+}
+
+.privacy-notice p {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.privacy-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.privacy-actions button,
+.privacy-settings {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.privacy-allow {
+  background: rgba(255, 231, 154, 0.2);
+}
+
+.privacy-decline,
+.privacy-settings {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.privacy-actions button:hover,
+.privacy-settings:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.privacy-actions button:focus-visible,
+.privacy-settings:focus-visible {
+  outline: 3px solid rgba(255, 231, 154, 0.88);
+  outline-offset: 3px;
+}
+
+.policy-shell {
+  width: min(840px, 100%);
+}
+
+.policy-card {
+  line-height: 1.65;
+}
+
+.policy-card h1 {
+  text-transform: none;
+}
+
+.policy-card h2 {
+  margin: 28px 0 8px;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.policy-card p,
+.policy-card li {
+  color: var(--text-secondary);
+}
+
+.policy-card ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  display: block;
+  list-style: disc;
+}
+
+.policy-card li + li {
+  margin-top: 8px;
+}
+
+.policy-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--accent);
+}
+
+.policy-updated {
+  margin-top: -2px;
+  font-size: 0.88rem;
 }
 
 @keyframes twinkle {
@@ -295,6 +435,21 @@ ul {
   .page-shell {
     width: 100%;
     margin: 8px 0 24px;
+  }
+
+  .privacy-notice {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .privacy-actions {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   h1 {
