@@ -8,6 +8,8 @@
   --text-primary: rgba(255, 255, 255, 0.96);
   --text-secondary: rgba(232, 238, 255, 0.76);
   --accent: #ffe79a;
+  --pdf-button-width: clamp(58px, 8vw, 72px);
+  --link-row-gap: 10px;
 }
 
 * {
@@ -156,6 +158,8 @@ h1 {
 
 .subtitle {
   margin: 0 0 22px;
+  max-width: calc(100% - var(--pdf-button-width) - var(--link-row-gap));
+  overflow-wrap: anywhere;
   font-size: 1.05rem;
   color: var(--text-secondary);
 }
@@ -171,7 +175,7 @@ ul {
 .link-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--link-row-gap);
   min-width: 0;
 }
 
@@ -208,8 +212,8 @@ ul {
 
 .pdf-btn {
   padding: 10px 14px;
-  min-width: clamp(58px, 8vw, 72px);
-  width: clamp(58px, 8vw, 72px);
+  min-width: var(--pdf-button-width);
+  width: var(--pdf-button-width);
   min-height: 48px;
   justify-content: center;
   flex-shrink: 0;
