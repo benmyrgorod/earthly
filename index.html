@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preload" as="image" href="assets/earthly-starry-background.png" fetchpriority="high" />
-    <link rel="stylesheet" href="styles.css?v=20260920-1" />
+    <link rel="stylesheet" href="styles.css?v=20260924-1" />
   </head>
   <body>
     <div class="starfield" aria-hidden="true"></div>
@@ -30,67 +30,88 @@
         <img class="logo" src="logo.png" width="96" height="96" alt="Derech Eretz logo" fetchpriority="high" decoding="async" />
         <div>
           <h1>OR DERECH ERETZ</h1>
-          <p class="subtitle">✡ A new commentary on Torah by Ovadia Binyamin inspired by <a href="https://www.tabletmag.com/contributors/moshe-rosenberg" target="_blank" rel="noopener noreferrer">Moshe Rosenberg</a> ✡</p>
+          <p class="subtitle">✡ A new commentary on Torah by Ovadiah Benjamin Myrgorod inspired by <a href="https://www.tabletmag.com/contributors/moshe-rosenberg" target="_blank" rel="noopener noreferrer">Moshe Rosenberg</a> ✡</p>
         </div>
       </div>
-      <ul class="link-list">
-        <li class="link-row">
-          <a class="link-btn" lang="ar" dir="rtl" href="https://docs.google.com/document/d/109TPGKsUo8oHjy0WdFChxGVaFDvyVs15/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            نور الطريق الأرضي
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/109TPGKsUo8oHjy0WdFChxGVaFDvyVs15/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for نور الطريق الأرضي">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+      <section class="book-picker" aria-label="Choose your book edition">
+        <div class="book-language-field" hidden>
+          <label for="book-language">Book language</label>
+          <select id="book-language" aria-controls="book-editions"></select>
+        </div>
+        <ul id="book-editions" class="link-list">
+        <li class="book-edition" data-language="ar" data-language-label="Arabic · العربية" id="edition-ar">
+          <h2 class="book-title" lang="ar" dir="rtl">نور الطريق الأرضي</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/109TPGKsUo8oHjy0WdFChxGVaFDvyVs15/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Arabic · العربية)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/109TPGKsUo8oHjy0WdFChxGVaFDvyVs15/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Arabic · العربية)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" lang="he" dir="rtl" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            אור דרך ארץ
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for אור דרך ארץ">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="en" data-language-label="English" id="edition-en">
+          <h2 class="book-title" lang="en" dir="ltr">The Light of the Earthly Path</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (English)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (English)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" lang="el" href="https://docs.google.com/document/d/13rbhxb74Q708pRzk1eVmdZOWmQTycMR3/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            Ελληνική έκδοση
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/13rbhxb74Q708pRzk1eVmdZOWmQTycMR3/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for Ελληνική έκδοση">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="el" data-language-label="Greek · Ελληνικά" id="edition-el">
+          <h2 class="book-title" lang="el" dir="ltr">Ελληνική έκδοση</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/13rbhxb74Q708pRzk1eVmdZOWmQTycMR3/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Greek · Ελληνικά)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/13rbhxb74Q708pRzk1eVmdZOWmQTycMR3/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Greek · Ελληνικά)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/edit?usp=sharing&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            The Light of the Earthly Path
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/1G4LvHJFtY5KsMVfRG6j4QGm5y1auPwxE/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for The Light of the Earthly Path">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="he" data-language-label="Hebrew · עברית" id="edition-he">
+          <h2 class="book-title" lang="he" dir="rtl">אור דרך ארץ</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Hebrew · עברית)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/1_KhqbVtu9IqQZ-IIJMQeCQCgPElxkXHt/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Hebrew · עברית)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
-            Свет земного пути
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for Свет земного пути">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="ru" data-language-label="Russian · Русский" id="edition-ru">
+          <h2 class="book-title" lang="ru" dir="ltr">Свет земного пути</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/edit?usp=share_link&ouid=103695002754294688214&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Russian · Русский)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/1S_4wEMHs5GLBcDQCGjeISt3NpQDFeO0N/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Russian · Русский)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" lang="sa" href="https://docs.google.com/document/d/1lhxRJxrFBoMfvH_5YQ0ZAoIDRLzb3tD4/edit?usp=share_link&amp;ouid=103695002754294688214&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">
-            संस्कृत संस्करणम्
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/1lhxRJxrFBoMfvH_5YQ0ZAoIDRLzb3tD4/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for संस्कृत संस्करणम्">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="sa" data-language-label="Sanskrit · संस्कृत" id="edition-sa">
+          <h2 class="book-title" lang="sa" dir="ltr">संस्कृत संस्करणम्</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/1lhxRJxrFBoMfvH_5YQ0ZAoIDRLzb3tD4/edit?usp=share_link&amp;ouid=103695002754294688214&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Sanskrit · संस्कृत)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/1lhxRJxrFBoMfvH_5YQ0ZAoIDRLzb3tD4/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Sanskrit · संस्कृत)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-        <li class="link-row">
-          <a class="link-btn" lang="th" href="https://docs.google.com/document/d/1ZXpTGmFxa2NbDOuw56IeOXtyTeuBCf-E/edit?usp=sharing&amp;ouid=103695002754294688214&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">
-            แสงแห่งวิถีโลก
-          </a>
-          <a class="pdf-btn" href="https://docs.google.com/document/d/1ZXpTGmFxa2NbDOuw56IeOXtyTeuBCf-E/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for แสงแห่งวิถีโลก">
-            <img src="download-icon-36px.png" width="18" height="18" alt="Download PDF" />
-          </a>
+        <li class="book-edition" data-language="th" data-language-label="Thai · ไทย" id="edition-th">
+          <h2 class="book-title" lang="th" dir="ltr">แสงแห่งวิถีโลก</h2>
+          <div class="book-actions">
+            <a class="link-btn" href="https://docs.google.com/document/d/1ZXpTGmFxa2NbDOuw56IeOXtyTeuBCf-E/edit?usp=sharing&amp;ouid=103695002754294688214&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" aria-label="Read in browser (Thai · ไทย)">Read in browser</a>
+            <a class="link-btn" href="https://docs.google.com/document/d/1ZXpTGmFxa2NbDOuw56IeOXtyTeuBCf-E/export?format=pdf" target="_blank" rel="noopener noreferrer" aria-label="Download PDF (Thai · ไทย)">
+              <img src="download-icon-36px.png" width="18" height="18" alt="" />
+              Download PDF
+            </a>
+          </div>
         </li>
-      </ul>
+        </ul>
+        <p class="book-hint">Read in Google Docs or download a PDF to keep.</p>
+      </section>
       <p class="signature">✨  May the clouds be glorious, and the path be lit!</p>
       <ul class="link-list">
         <li class="link-row">
@@ -135,7 +156,7 @@
           Privacy &amp; confidentiality: optional Microsoft Clarity and GoatCounter analytics are used only with your permission. Do not share confidential, sensitive, or personally identifying information through this site.
           <a href="privacy.html">Personal Data Policy</a>
         </p>
-        <p class="copyright">© 2026i, Ovadia Binyamin</p>
+        <p class="copyright">© 2026i, Ovadiah Benjamin Myrgorod</p>
       </footer>
     </div>
     <aside class="privacy-notice" aria-labelledby="privacy-notice-title" aria-describedby="privacy-notice-description" hidden>
@@ -151,7 +172,7 @@
         <button class="privacy-decline" type="button" data-analytics-choice="decline">Continue without analytics</button>
       </div>
     </aside>
-    <script src="script.js?v=20260815-3"></script>
+    <script src="script.js?v=20260924-1"></script>
     <script src="privacy.js?v=20260907-1"></script>
   </body>
 </html>

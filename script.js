@@ -1,3 +1,25 @@
+const bookLanguage = document.querySelector('#book-language');
+
+if (bookLanguage) {
+  const editions = [...document.querySelectorAll('.book-edition')];
+  for (const edition of editions) {
+    const option = document.createElement('option');
+    option.value = edition.dataset.language;
+    option.textContent = edition.dataset.languageLabel;
+    bookLanguage.appendChild(option);
+  }
+
+  const showSelectedEdition = () => {
+    for (const edition of editions) {
+      edition.hidden = edition.dataset.language !== bookLanguage.value;
+    }
+  };
+
+  bookLanguage.addEventListener('change', showSelectedEdition);
+  showSelectedEdition();
+  document.querySelector('.book-language-field').hidden = false;
+}
+
 const starfield = document.querySelector('.starfield');
 const starCount = 90;
 
